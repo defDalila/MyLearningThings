@@ -1,0 +1,107 @@
+---
+Pagetitle: "Comentários"
+format: html
+editor: visual
+---
+
+# Comentários
+
+--------------------------------------------------------------------------------
+
+A maneira como os comentários funcionam no Sass difere de forma significativa
+entre a sintaxe SCSS e a sintaxe recuada.
+
+Ambas suportam dois tipos de comentários:
+
+-   Comentários com `/* */` (multilinha): geralmente são compilados para CSS.
+-   Comentários com `//` (linha única): nunca são compilados para CSS.
+
+## Comentários SCSS
+
+Em SCSS, os comentários funcionam de forma similar a linguagens como JavaScript.
+
+-   Comentários de linha única começam com `//` e são ignorados no CSS
+    compilado. Por esse motivo são chamados de **comentários silenciosos**.
+-   Comentários multilinha começam com `/*` e terminam com `*/`. Quando
+    utilizados fora de seletores ou blocos, são compilados para CSS, por isso
+    são chamados de **loud comments**.
+
+``` {.scss .code-sample}
+// Este comentário não será incluído no CSS.
+
+/* Mas este será, exceto no modo compactado. */
+
+/* Também pode conter interpolação:
+ * 1 + 1 = #{1 + 1} */
+
+/*! Este será incluído até mesmo no modo compactado. */
+
+p /* Comentários multilinha podem ser inseridos em qualquer local
+     onde espaços em branco sejam permitidos. */ .sans {
+  font: Helvetica, // Comentários de linha única também são permitidos aqui.
+        sans-serif;
+}
+```
+
+## Comentários na Sintaxe Recuada (Sass)
+
+Na sintaxe recuada, os comentários seguem o padrão baseado em **recuo**, como
+todo o restante da linguagem.
+
+-   Comentários com `//` continuam sendo **silenciosos**, mas **tudo o que
+    estiver recuado abaixo da linha com `//` também será comentado**.
+
+Comentários iniciados com `/*` funcionam de forma similar aos do SCSS, mas **não
+requerem `*/` para serem fechados**, pois a extensão é determinada pela
+indentação.
+
+``` {.sass .code-sample}
+// Este comentário não será incluído no CSS.
+  Esta linha também está comentada.
+
+/* Este comentário será incluído no CSS, exceto no modo compactado.
+
+/* Também pode conter interpolação:
+  1 + 1 = #{1 + 1}
+
+/*! Comentário sempre incluído no CSS, até no modo compactado.
+
+p .sans
+  font: Helvetica, /* Comentários inline devem ser fechados. */ sans-serif
+```
+
+::: callout-note
+## Comentários também podem ser utilizados dentro de expressões na sintaxe recuada, usando a mesma sintaxe do SCSS.
+:::
+
+## Comentários de Documentação
+
+Ao desenvolver bibliotecas em Sass, é possível utilizar **comentários de
+documentação** para descrever mixins, funções, variáveis e seletores. Eles são
+lidos por ferramentas como o **SassDoc**, que geram documentação automática a
+partir desses comentários.
+
+-   São escritos com três barras (`///`) e colocados diretamente acima do item
+    documentado.
+-   O conteúdo pode usar **Markdown** e **anotações** como `@param` e `@return`.
+
+``` {.scss .code-sample}
+/// Calcula uma exponenciação.
+///
+/// @param {number} $base
+///   O número a ser multiplicado por ele mesmo.
+/// @param {integer (sem unidade)} $exponent
+///   Quantas vezes multiplicar `$base`.
+/// @return {number} `$base` elevado à `$exponent`.
+@function pow($base, $exponent) {
+  $result: 1;
+  @for $_ from 1 through $exponent {
+    $result: $result * $base;
+  }
+  @return $result;
+}
+```
+
+::: callout-tip
+## Consulte a documentação da biblioteca [Susy Grid](https://www.oddbird.net/susy/){.url-page} para ver um exemplo prático do uso de `SassDoc`.
+:::

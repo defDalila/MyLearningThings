@@ -1,0 +1,92 @@
+---
+Pagetitle: "Funções Especiais"
+format: html
+editor: visual
+---
+
+# Funções Especiais
+
+Embora o Sass suporte a maioria das funções CSS utilizando a sintaxe tradicional de funções, algumas delas requerem tratamento especial devido à sua estrutura de sintaxe diferenciada. Nessas exceções, o Sass emprega lógica adicional para interpretar corretamente os argumentos. Todas essas chamadas especiais de função retornam **strings sem aspas**.
+
+## `URL()`
+
+A função `url()` é amplamente utilizada em CSS porém e permitido inserir argumentos tanto entre aspas quanto sem aspas. Como as URLs que não estão entre aspas não são expressões válidas no `SassScript`, o Sass aplica um mecanismo de `parsing` interno, de modo que quando o argumento passado é um URL válido sem as aspas, o Sass o identifica diretamente, permitindo ainda interpolação de valores do `SassScript`.
+
+``` {.scss .code-sample}
+$roboto-font-path: "../fonts/roboto";
+
+@font-face {
+    // Isso é analisado como uma chamada de função normal que usa uma string entre aspas.
+    src: url("#{$roboto-font-path}/Roboto-Thin.woff2") format("woff2");
+
+    font-family: "Roboto";
+    font-weight: 100;
+}
+
+@font-face {
+    // Isso é analisado como uma chamada de função normal que recebe uma expressão aritmética.
+    src: url($roboto-font-path + "/Roboto-Light.woff2") format("woff2");
+
+    font-family: "Roboto";
+    font-weight: 300;
+}
+
+@font-face {
+    // Isso é analisado como uma função especial interpolada.
+    src: url(#{$roboto-font-path}/Roboto-Regular.woff2) format("woff2");
+
+    font-family: "Roboto";
+    font-weight: 400;
+}
+```
+
+O mesmo código utilizando CSS:
+
+``` {.css .code-sample}
+@font-face {
+  src: url("../fonts/roboto/Roboto-Thin.woff2") format("woff2");
+  font-family: "Roboto";
+  font-weight: 100;
+}
+
+@font-face {
+  src: url("../fonts/roboto/Roboto-Light.woff2") format("woff2");
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+@font-face {
+  src: url(../fonts/roboto/Roboto-Regular.woff2) format("woff2");
+  font-family: "Roboto";
+  font-weight: 400;
+}
+```
+
+###  `Element()`, `Progid:...()` e `Expression()`
+
+Essas funções seguem uma sintaxe não convencional, onde:
+
+-    A função `element()` está no escopo do CSS e seus IDs são passados como cores, portanto é necessário uma atenção especial ao ser analisada.
+-   As funções expression( ) e progrid: ...( )[^1] são funções legadas provenientes do navegador Internet Explorer e então não são suportadas na maioria dos navegadores modernos. Entretando, o Sass reconhece essas funções por questões de compatibilidade.
+
+::: callout-important
+## O Sass permite qualquer texto nessas chamadas de função, incluindo parênteses aninhados. Nada é interpretado como uma expressão SassScript, com a exceção de que a interpolação pode ser usada para injetar  valores dinâmicos.
+:::
+
+#### Exemplos
+
+``` {.scss .code-sample}
+$logo-element: logo-bg;
+
+.logo {
+  background: element(##{$logo-element});
+}
+```
+
+``` {.css .code-sample}
+.logo {
+  background: element(#logo-bg);
+}
+```
+
+[^1]: funções passadas para a função pogrid: ()

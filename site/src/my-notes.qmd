@@ -1,13 +1,11 @@
 ---
-title: "Meus Resumos"
+title: Meus Resumos
 listing: 
   - id: my-notes
-    type: grid
     contents: "pages/*/index.qmd"
-    fields: [image, date, title, author, reading-time]
+    type: grid
     date-format: "DD/MM/YY"
     categories: true
-format: html
 ---
 
 :::: {#.apresentation}

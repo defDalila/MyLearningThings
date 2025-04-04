@@ -1,8 +1,3 @@
-project:
-  type: website
-  output-dir: site
-  
-  
 
 website:
   title: "My Learning Things"
@@ -10,8 +5,8 @@ website:
   page-navigation: true
 
   navbar:
-    logo: src/assets/img/logo.png
-    logo-href: src/index.qmd
+    logo: assets/img/logo.png
+    logo-href: index.qmd
     background: dark
     pinned: true
     title: false
@@ -30,10 +25,10 @@ website:
       align: left
       background: light
       pinned: true
-      logo: src/assets/img/sass.png
-      logo-href: src/pages/sass/index.qmd
+      logo: assets/img/sass.png
+      logo-href: pages/sass/index.qmd
       contents: 
-        - section: Resumos
+        - section: Sass
           href: src/pages/sass/index.qmd
           contents:
             - section: Introdução
@@ -46,9 +41,6 @@ website:
                 - src/pages/sass/b2-sass.qmd
             
 
-
-
-
 format:
   html:
     highlight-style: dracula
@@ -59,15 +51,7 @@ format:
     css: assets/styles.css
     toc: true
     toc-expand: true
-    grid: 
-      content-mode: auto
-      sidebar-width: 20%
-      margin-width: 20%
-      gutter-width: 3em
 
       
 editor: visual
-
-
-freeze: auto
 
