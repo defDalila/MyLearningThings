@@ -62,15 +62,15 @@ O mesmo código utilizando CSS:
 }
 ```
 
-###  `Element()`, `Progid:...()` e `Expression()`
+### `Element()`, `Progid:...()` e `Expression()`
 
 Essas funções seguem uma sintaxe não convencional, onde:
 
--    A função `element()` está no escopo do CSS e seus IDs são passados como cores, portanto é necessário uma atenção especial ao ser analisada.
+-   A função `element()` está no escopo do CSS e seus IDs são passados como cores, portanto é necessário uma atenção especial ao ser analisada.
 -   As funções expression( ) e progrid: ...( )[^1] são funções legadas provenientes do navegador Internet Explorer e então não são suportadas na maioria dos navegadores modernos. Entretando, o Sass reconhece essas funções por questões de compatibilidade.
 
 ::: callout-important
-## O Sass permite qualquer texto nessas chamadas de função, incluindo parênteses aninhados. Nada é interpretado como uma expressão SassScript, com a exceção de que a interpolação pode ser usada para injetar  valores dinâmicos.
+## O Sass permite qualquer texto nessas chamadas de função, incluindo parênteses aninhados. Nada é interpretado como uma expressão SassScript, com a exceção de que a interpolação pode ser usada para injetar valores dinâmicos.
 :::
 
 #### Exemplos

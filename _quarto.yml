@@ -3,7 +3,6 @@ project:
   output-dir: site
   
   
-
 website:
   title: "My Learning Things"
   bread-crumbs: false

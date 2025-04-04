@@ -8,7 +8,6 @@ editor: visual
 ## Learning Sass {style="text-align: center; font-size: 1.5em;  background-color: #eecffe; color: #1f0954;"}
 
 ::: {style="width:50%; font-size:0.6em;  text-align: center; margin:auto; background-color: #eecffe; color: #1f0954;"}
-Segundo a página: Sass é a linguagem de extensão CSS de nível profissional mais
-madura, estável e poderosa do  mundo.
+Segundo a página: Sass é a linguagem de extensão CSS de nível profissional mais madura, estável e poderosa do  mundo.
 :::
 ::::

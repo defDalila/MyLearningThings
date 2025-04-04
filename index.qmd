@@ -1,0 +1,32 @@
+---
+pagetitle: "My Learning Things"
+format: html
+page-layout: full
+toc: false
+---
+
+:::::::: {#hero-banner}
+::: {#hero-image}
+![](src/assets/img/code.png)
+:::
+
+:::::: {#hero-content}
+::: {#banner-title}
+# My Learning Things
+:::
+
+::: {#welcome}
+A mente sedenta por conhecimento é como um rio que nunca para de correr, sempre em busca de novas fontes!!
+:::
+
+::: {#banner-description}
+Tudo começou comigo focada em colocar meus todos os meus resumos em um lugar só e parar de usar caderno (paperless que fala né.... rs)! Agora o foco é utilizar esses resumos para aprender desenvolvimento web haha!
+
+Asssim.... nãaaao virar uma frontender né?! Mas aprendendo um pouco sobre API, REST, CRUD... foi me dando um nervoso de ver o instrutor utilizando umas classes que eu n sabia de onde vinha! Uns uns col-12-lg de eu ???? "Diabéisso" ????????
+
+Bom, o motivo e o objetivo está ai!
+
+Se vai ser útil é ooouuutra história!
+:::
+::::::
+::::::::
