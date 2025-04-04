@@ -1,0 +1,197 @@
+---
+title: "Noções Básicas de Sass"
+format: html
+toc: true
+number-sections: false
+---
+
+# Introdução
+
+Sass (Syntactically Awesome Stylesheets) é um pré-processador CSS que adiciona
+recursos avançados à linguagem, como variáveis, aninhamento, mixins e herança.
+Ele facilita a escrita e manutenção de folhas de estilo, promovendo um código
+mais organizado, reutilizável e eficiente.
+
+--------------------------------------------------------------------------------
+
+# Pré-processamento
+
+Com o aumento da complexidade das folhas de estilo CSS, o uso de um
+pré-processador torna-se essencial. O Sass permite escrever código mais robusto
+que é, posteriormente, compilado em CSS padrão.
+
+Para compilar um arquivo Sass em CSS, utiliza-se o terminal:
+
+``` bash
+sass input.scss output.css
+```
+
+Para monitorar alterações automaticamente:
+
+``` bash
+sass --watch input.scss output.css
+```
+
+Também é possível monitorar pastas inteiras:
+
+``` bash
+sass --watch app/sass:public/stylesheets
+```
+
+--------------------------------------------------------------------------------
+
+# Sintaxes
+
+Sass possui duas sintaxes:
+
+-   **SCSS (`.scss`)**: mais comum, é um superconjunto do CSS.
+-   **SASS (`.sass`)**: usa indentação ao invés de chaves e ponto e vírgula.
+
+--------------------------------------------------------------------------------
+
+# Variáveis
+
+Permitem armazenar valores reutilizáveis, como cores e fontes.
+
+``` scss
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+```
+
+--------------------------------------------------------------------------------
+
+# Aninhamento
+
+Reflete a hierarquia do HTML, facilitando a leitura do código CSS.
+
+``` scss
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+```
+
+--------------------------------------------------------------------------------
+
+# Parciais
+
+Arquivos Sass iniciados com `_` que contêm trechos de código reutilizáveis. São
+importados com `@use` e não geram CSS diretamente.
+
+``` scss
+// _partial.scss
+```
+
+--------------------------------------------------------------------------------
+
+# Módulos
+
+A diretiva `@use` permite dividir o código em múltiplos arquivos Sass.
+
+``` scss
+// _base.scss
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+// styles.scss
+@use 'base';
+
+.inverse {
+  background-color: base.$primary-color;
+  color: white;
+}
+```
+
+--------------------------------------------------------------------------------
+
+# Misturas (Mixins)
+
+Permitem agrupar regras CSS reutilizáveis. Podem receber parâmetros.
+
+``` scss
+@mixin theme($theme: DarkGray) {
+  background: $theme;
+  box-shadow: 0 0 1px rgba($theme, .25);
+  color: #fff;
+}
+
+.info {
+  @include theme;
+}
+.alert {
+  @include theme($theme: DarkRed);
+}
+.success {
+  @include theme($theme: DarkGreen);
+}
+```
+
+--------------------------------------------------------------------------------
+
+# Herança (Extend)
+
+Compartilha estilos entre seletores por meio da diretiva `@extend`. Pode ser
+aplicada a classes placeholder (`%nome`) que só são incluídas quando estendidas.
+
+``` scss
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+}
+```
+
+--------------------------------------------------------------------------------
+
+# Operadores
+
+Permitem realizar operações matemáticas com valores CSS.
+
+``` scss
+@use "sass:math";
+
+.container {
+  display: flex;
+}
+
+article[role="main"] {
+  width: math.div(600px, 960px) * 100%;
+}
+
+aside[role="complementary"] {
+  width: math.div(300px, 960px) * 100%;
+  margin-left: auto;
+}
+```

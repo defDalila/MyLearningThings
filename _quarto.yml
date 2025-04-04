@@ -22,22 +22,37 @@ website:
   sidebar: 
     - id: sass
       style: docked
+      background: light
       pinned: true
-      alignment: left
-      logo: src/assets/img/Sass.svg
+      alignment: center
+      logo: src/assets/img/sass.png
       logo-href: /src/pages/sass/index.qmd
       contents: 
-        - section: Noções básicas de Sass
+        - section: Introdução
           href: src/pages/sass/index.qmd
-          contents: "src/pages/sass/*.qmd"
+          contents: 
+            - src/pages/sass/a1-sass.qmd
+            - src/pages/sass/a2-sass.qmd
+        - section: Regras de Estilo
+          contents: 
+           - src/pages/sass/b1-sass.qmd
+            
 
 format:
   html:
+    highlight-style: dracula
+    fontsize: 18px
     theme:
       - pulse
       - brand
     css: src/assets/styles.css
     toc: true
-
+    grid:
+      sidebar-width: 250px
+      body-width: 800px
+      margin-width: 250px
+      gutter-width: 3rem
+      
+      
 editor: visual
 

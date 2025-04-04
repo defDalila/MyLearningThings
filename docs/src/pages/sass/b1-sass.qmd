@@ -1,0 +1,102 @@
+---
+title: "Estrutura de uma Folha de Estilo"
+---
+
+Assim como o CSS, a maioria das folhas de estilo Sass é composta principalmente
+por regras de estilo que contêm declarações de propriedade. No entanto, o Sass
+oferece diversos recursos adicionais que coexistem com essas declarações.
+
+## Declarações
+
+Uma folha de estilo Sass é composta por uma série de declarações, que são
+avaliadas para construir o CSS resultante. Algumas declarações possuem blocos —
+definidos por `{` e `}` — que contêm outras declarações. Por exemplo, uma regra
+de estilo é uma declaração com um bloco que, por sua vez, pode conter
+declarações de propriedade.
+
+No SCSS, as instruções são separadas por ponto e vírgula (que é opcional quando
+a instrução possui bloco). Na sintaxe recuada, elas são separadas apenas por
+quebras de linha.
+
+### Declarações Universais
+
+As declarações a seguir podem ser utilizadas em qualquer parte de uma folha de
+estilo Sass:
+
+-   Declarações de variáveis, como `$var: value`.
+-   Regras de controle de fluxo, como `@if` e `@each`.
+-   Regras como `@error`, `@warn` e `@debug`.
+
+### Instruções CSS
+
+Essas instruções são da formatação do CSS e podem ser utilizadas em qualquer
+lugar, exceto dentro de uma função definida com `@function`:
+
+-   Regras de estilo, como `h1 { /* ... */ }`.
+-   Regras CSS (\@-rules), como `@media` e `@font-face`.
+-   Uso de mixins com `@include`.
+-   A regra `@at-root`.
+
+### Declarações de Nível Superior
+
+Essas declarações só podem ser utilizadas no nível superior de uma folha de
+estilo ou aninhadas dentro de uma instrução CSS de nível superior:
+
+-   Carregamento de módulos, utilizando `@use`.
+-   Importações, utilizando `@import`.
+-   Definições de mixin com `@mixin`.
+-   Definições de função com `@function`.
+
+### Outras Declarações
+
+-   Declarações de propriedade, como `width: 100px`, devem ser utilizadas dentro
+    de regras de estilo e de algumas regras CSS.
+-   A regra `@extend` pode ser utilizada apenas dentro de regras de estilo.
+
+--------------------------------------------------------------------------------
+
+## Expressões
+
+Uma expressão é qualquer valor posicionado à direita de uma declaração de
+propriedade ou de uma variável. Cada expressão gera um valor. Qualquer valor de
+propriedade CSS válido também é uma expressão Sass. No entanto, o Sass expande
+significativamente o poder das expressões, permitindo seu uso em mixins,
+funções, controle de fluxo com `@if` e operações aritméticas. Essa sintaxe de
+expressão é chamada **SassScript**.
+
+### Literais
+
+As expressões mais básicas representam valores estáticos:
+
+-   **Números**, com ou sem unidades: `12`, `100px`.
+-   **Strings**, com ou sem aspas: `"Helvetica Neue"`, `bold`.
+-   **Cores**, por código hexadecimal ou nome: `#c6538c`, `blue`.
+-   **Booleanos**: `true` ou `false`.
+-   O valor **null**.
+-   **Listas de valores**, separados por espaço ou vírgula, com ou sem
+    colchetes: `1.5em 1em 0 2em`, `Helvetica, Arial, sans-serif`,
+    `[col1-start]`.
+-   **Mapas**, que associam chaves a valores:
+    `("background": red, "foreground": pink)`.
+
+### Operações
+
+O Sass permite diversas operações:
+
+-   `==` e `!=` verificam igualdade ou diferença entre valores.
+-   `+`, `-`, `*`, `/` e `%` realizam operações matemáticas com suporte a
+    unidades.
+-   `<`, `<=`, `>`, `>=` comparam números.
+-   `and`, `or`, e `not` funcionam como operadores booleanos. Apenas `false` e
+    `null` são considerados falsos.
+-   `+`, `-`, e `/` podem concatenar strings.
+-   Parênteses `( )` podem ser utilizados para definir precedência de operações.
+
+### Outras Expressões
+
+-   **Variáveis**, como `$var`.
+-   **Chamadas de função**, como `nth($list, 1)` ou `var(--main-bg-color)`.
+-   **Funções especiais**, como `calc(1px + 100%)` ou
+    `url(http://myapp.com/assets/logo.png)`.
+-   O **seletor pai**, representado por `&`.
+-   O valor `!important`, interpretado como uma string sem aspas.
