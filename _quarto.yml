@@ -1,0 +1,43 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "My Learning Things"
+  bread-crumbs: false
+  favicon: src/assets/logo.png
+  page-navigation: true
+  back-to-top-navigation: true
+  navbar:
+    pinned: true
+    title: false
+    left:
+      - icon: house-heart-fill
+        href: index.qmd
+        text: Home
+      - icon: clipboard-heart-fill
+        href: src/my-notes.qmd
+        text: "My Notes"
+        
+  sidebar: 
+    - id: sass
+      style: docked
+      pinned: true
+      alignment: left
+      logo: src/assets/img/Sass.svg
+      logo-href: /src/pages/sass/index.qmd
+      contents: 
+        - section: Noções básicas de Sass
+          href: src/pages/sass/index.qmd
+          contents: "src/pages/sass/*.qmd"
+
+format:
+  html:
+    theme:
+      - pulse
+      - brand
+    css: src/assets/styles.css
+    toc: true
+
+editor: visual
+

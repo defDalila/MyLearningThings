@@ -1,0 +1,9 @@
+---
+title: "Tópicos dos Resumos"
+listing:
+  contents:
+     - "pages/*/index.qmd"
+  date-format: "DD/MM/YY"
+  sort: "date desc"
+  type: grid
+---
