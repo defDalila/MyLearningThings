@@ -7,6 +7,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   color: #140114;
+  background-color: #eecffe;
 }
 
 
@@ -17,8 +18,10 @@ body {
   display: grid;
   margin: 10vh auto auto auto;
   grid-template-columns: auto  auto 40%;
-  background-color: rgb(237, 219, 255);
+  background-color: #00022e;
   border-radius: 20px;
+  color: #f0ffff;
+  padding-left: 1em;
 }
 
 #home-page-layout > div {
@@ -46,11 +49,14 @@ body {
   grid-column: 1  /span 2;
   grid-row: 2;
   text-align: center;
-  font-size: 1.1em;
-  color: rgb(216, 66, 216);
+  font-style: italic;
+  font-size: 1.2em;
+  color: #ff7fa7;
 }
 
 #home-description {
+  color: #F0FFFF;
+  font-size: 20px;
   grid-column: 1 /span 2;
   text-align: justify;
   padding: 5px;

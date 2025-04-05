@@ -46,8 +46,6 @@ website:
             
 
 
-
-
 format:
   html:
     highlight-style: dracula
@@ -60,8 +58,8 @@ format:
     toc-expand: true
     grid: 
       content-mode: auto
-      sidebar-width: 20%
-      margin-width: 20%
+      sidebar-width: 20vw
+      margin-width: 20vw
       gutter-width: 3em
 
       
