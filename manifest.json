@@ -1,0 +1,254 @@
+{
+  "version": 1,
+  "locale": "pt_BR",
+  "platform": "4.4.3",
+  "metadata": {
+    "appmode": "quarto-static",
+    "primary_rmd": "index.qmd",
+    "primary_html": null,
+    "content_category": null,
+    "has_parameters": false
+  },
+  "quarto": {
+    "version": "1.7.18",
+    "engines": ["markdown"]
+  },
+  "packages": null,
+  "files": {
+    ".Rprofile": {
+      "checksum": "f039bdaecb8817502d7ee4a9e3623e87"
+    },
+    "_quarto.yml": {
+      "checksum": "b0e1788118de72a75bd302276c923e0e"
+    },
+    "_site/index.html": {
+      "checksum": "3cbd0db56b5fb95f22f0bbd00ccb9099"
+    },
+    "_site/listings.json": {
+      "checksum": "928e7aff5c81d6338b441c31cceab9d8"
+    },
+    "_site/search.json": {
+      "checksum": "9024ba860bc04ddbd4e86ccb2d928a0a"
+    },
+    "_site/site_libs/bootstrap/bootstrap-39fdd5f683eec94a9dbf2426afa9569f.min.css": {
+      "checksum": "39fdd5f683eec94a9dbf2426afa9569f"
+    },
+    "_site/site_libs/bootstrap/bootstrap-dark-39fdd5f683eec94a9dbf2426afa9569f.min.css": {
+      "checksum": "39fdd5f683eec94a9dbf2426afa9569f"
+    },
+    "_site/site_libs/bootstrap/bootstrap-icons.css": {
+      "checksum": "2318f137d201fbf51601fa0faba6bef7"
+    },
+    "_site/site_libs/bootstrap/bootstrap-icons.woff": {
+      "checksum": "1a51dfbe5467607389d603c02a77cd10"
+    },
+    "_site/site_libs/bootstrap/bootstrap.min.js": {
+      "checksum": "e2b09c06f0e714b6144a6788a28e3950"
+    },
+    "_site/site_libs/clipboard/clipboard.min.js": {
+      "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
+    },
+    "_site/site_libs/quarto-html/anchor.min.js": {
+      "checksum": "91bcf6cd1fd88fec3f109811e5fc3546"
+    },
+    "_site/site_libs/quarto-html/popper.min.js": {
+      "checksum": "3a4a291ccf3f1ea0f82b641542fd3827"
+    },
+    "_site/site_libs/quarto-html/quarto-syntax-highlighting-6a243de16cf0cafd79e1f05265a8be51.css": {
+      "checksum": "6a243de16cf0cafd79e1f05265a8be51"
+    },
+    "_site/site_libs/quarto-html/quarto-syntax-highlighting-dark-6a243de16cf0cafd79e1f05265a8be51.css": {
+      "checksum": "6a243de16cf0cafd79e1f05265a8be51"
+    },
+    "_site/site_libs/quarto-html/quarto.js": {
+      "checksum": "6f4245742deb3cc92337dbe2701ccfe1"
+    },
+    "_site/site_libs/quarto-html/tabsets/tabsets.js": {
+      "checksum": "e8d6a8862b33ccc461f8fd532e05b365"
+    },
+    "_site/site_libs/quarto-html/tippy.css": {
+      "checksum": "ebd6f8ce46a677e1a4f5f8a8317109a9"
+    },
+    "_site/site_libs/quarto-html/tippy.umd.min.js": {
+      "checksum": "d828775275749701b48bd9d958814111"
+    },
+    "_site/site_libs/quarto-listing/list.min.js": {
+      "checksum": "d9fe78988e4cf7a26ac9e06aca9ce679"
+    },
+    "_site/site_libs/quarto-listing/quarto-listing.js": {
+      "checksum": "919f171782f2658435097266e834d316"
+    },
+    "_site/site_libs/quarto-nav/quarto-nav.js": {
+      "checksum": "12d334846b27bdb493298c08277bdf7f"
+    },
+    "_site/site_libs/quarto-search/autocomplete.umd.js": {
+      "checksum": "c64544db941e048f2652217cb9a7f29c"
+    },
+    "_site/site_libs/quarto-search/fuse.min.js": {
+      "checksum": "de7d60e4a6881074275feca14b84a49d"
+    },
+    "_site/site_libs/quarto-search/quarto-search.js": {
+      "checksum": "bb16b7e73be13eba97c99d25b2a476b3"
+    },
+    "_site/src/assets/img/code.png": {
+      "checksum": "9cc7c88e2792c417c87631a3f94d88dc"
+    },
+    "_site/src/assets/img/logo.png": {
+      "checksum": "c0b950c629c0a3907c644680e977ca12"
+    },
+    "_site/src/assets/img/sass.png": {
+      "checksum": "150e71c37cb09aaf425670b0d2af987e"
+    },
+    "_site/src/assets/styles.css": {
+      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "_site/src/my-notes.html": {
+      "checksum": "4e6b39d5102c6ecf92188eadb5e364a1"
+    },
+    "_site/src/pages/sass/a1-sass.html": {
+      "checksum": "916a03a7508964d7fd75127b70d510f2"
+    },
+    "_site/src/pages/sass/a2-sass.html": {
+      "checksum": "265cec16292d59997dc2c30b3a704c7e"
+    },
+    "_site/src/pages/sass/b1-sass.html": {
+      "checksum": "f82e1480e1ca6798eecf35eaf3a45310"
+    },
+    "_site/src/pages/sass/b2-sass.html": {
+      "checksum": "b19db96b1f471bdd333d3da8e73382ab"
+    },
+    "_site/src/pages/sass/b3-sass.html": {
+      "checksum": "0eb8cf907c60bdf999cd2a6268bdb014"
+    },
+    "_site/src/pages/sass/index.html": {
+      "checksum": "268bb4ee35c64cb975545153bd559164"
+    },
+    "_site/src/pages/sass/Sass.svg": {
+      "checksum": "2345a44ceedb537fb93c7d4dcfccd06a"
+    },
+    "images/clipboard-762939935.png": {
+      "checksum": "9cc7c88e2792c417c87631a3f94d88dc"
+    },
+    "index.qmd": {
+      "checksum": "cad735eab2e195ea43e6b711a9016de9"
+    },
+    "README.md": {
+      "checksum": "af62aa0dea41a950072b566b6fd07d44"
+    },
+    "renv.lock": {
+      "checksum": "2d45944ac7c102f283884606c68d0e1c"
+    },
+    "src/assets/img/Azure-Dark.svg": {
+      "checksum": "2d1cdb584c5782f39849b28f527286b8"
+    },
+    "src/assets/img/Bootstrap.svg": {
+      "checksum": "3fbbe3bfc5e5681fd7d2cda8d4226e5f"
+    },
+    "src/assets/img/code.png": {
+      "checksum": "9cc7c88e2792c417c87631a3f94d88dc"
+    },
+    "src/assets/img/CS.svg": {
+      "checksum": "0304f96b1ddf63e6bcee9350e3d0e029"
+    },
+    "src/assets/img/CSS.svg": {
+      "checksum": "de3cd48c84b9f46a8bdb443460c7a2e6"
+    },
+    "src/assets/img/DotNet.svg": {
+      "checksum": "fb66bbeb665502e599760d341f03c92f"
+    },
+    "src/assets/img/Figma-Dark.svg": {
+      "checksum": "52b36f2cdefb3bbc2182df2cdfd56fd7"
+    },
+    "src/assets/img/Git.svg": {
+      "checksum": "0923944f047fc1cf2dbbf5203f54bca2"
+    },
+    "src/assets/img/Github-Dark.svg": {
+      "checksum": "76e185f321ab9ead30ba91f4d63abfad"
+    },
+    "src/assets/img/HTML.svg": {
+      "checksum": "48ce79c640714aaf5a11d800aae3adc4"
+    },
+    "src/assets/img/Instagram.svg": {
+      "checksum": "43421e6c83b4f664a2b49f06ee49446b"
+    },
+    "src/assets/img/JavaScript.svg": {
+      "checksum": "3fa60ce698eebc65dcfa45bdd82d73a9"
+    },
+    "src/assets/img/LaTeX-Dark.svg": {
+      "checksum": "4f46b93ea2fbe73dfc8db1e1376b5eda"
+    },
+    "src/assets/img/LinkedIn.svg": {
+      "checksum": "ab906afad3211e1302fd8cb2c2da3287"
+    },
+    "src/assets/img/logo.png": {
+      "checksum": "c0b950c629c0a3907c644680e977ca12"
+    },
+    "src/assets/img/Markdown-Dark.svg": {
+      "checksum": "4e4ec79d9f648f544eb702c8b524b5d6"
+    },
+    "src/assets/img/MongoDB.svg": {
+      "checksum": "9da90a3050d799b00d76b2f869876e3b"
+    },
+    "src/assets/img/NodeJS-Dark.svg": {
+      "checksum": "6f7d253a263166725233f6272f1eb64c"
+    },
+    "src/assets/img/Python-Dark.svg": {
+      "checksum": "a657dfc68d4e66734ad3a4812ca5ef9c"
+    },
+    "src/assets/img/R-Dark.svg": {
+      "checksum": "a043b0d327de615e75e8f7f6769e47a8"
+    },
+    "src/assets/img/React-Dark.svg": {
+      "checksum": "0db67494a255bc34511446da2840a098"
+    },
+    "src/assets/img/sass.png": {
+      "checksum": "150e71c37cb09aaf425670b0d2af987e"
+    },
+    "src/assets/img/Sass.svg": {
+      "checksum": "2345a44ceedb537fb93c7d4dcfccd06a"
+    },
+    "src/assets/img/SQLite.svg": {
+      "checksum": "a88288e4789b55a7ae7538d4aba0fbed"
+    },
+    "src/assets/img/VisualStudio-Dark.svg": {
+      "checksum": "700d7b33219f7bc50f1cb5808336e7df"
+    },
+    "src/assets/img/VSCode-Dark.svg": {
+      "checksum": "a374b35942492bdef55707014cf80f96"
+    },
+    "src/assets/img/Windows-Dark.svg": {
+      "checksum": "645a2f146564e3ae0518e7411c952f5b"
+    },
+    "src/assets/styles.css": {
+      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "src/my-notes.qmd": {
+      "checksum": "a762a823c965fba8ad7edd8c2c2befbd"
+    },
+    "src/pages/sass/_metadata.yml": {
+      "checksum": "8f1bdd1b92aa85cc8edf01ebbde26360"
+    },
+    "src/pages/sass/a1-sass.qmd": {
+      "checksum": "f189c8a2609787accc1da129b37f159f"
+    },
+    "src/pages/sass/a2-sass.qmd": {
+      "checksum": "1f8bcbbdba2da5bbadcf6b94409e0122"
+    },
+    "src/pages/sass/b1-sass.qmd": {
+      "checksum": "6db0c2658856335f58e6a9bcbd4ffc23"
+    },
+    "src/pages/sass/b2-sass.qmd": {
+      "checksum": "b606334ee0a1119ae3c2629cf40a79a9"
+    },
+    "src/pages/sass/b3-sass.qmd": {
+      "checksum": "06f08a2b92d47b87885088debfdfa5cf"
+    },
+    "src/pages/sass/index.qmd": {
+      "checksum": "9009f358af3914ff501064b9dec210f3"
+    },
+    "src/pages/sass/Sass.svg": {
+      "checksum": "2345a44ceedb537fb93c7d4dcfccd06a"
+    }
+  },
+  "users": null
+}

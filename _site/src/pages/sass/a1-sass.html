@@ -8,7 +8,7 @@
 
 <meta name="author" content="Dalila Mendonça">
 
-<title>Estrutura de uma Folha de Estilo – My Learning Things</title>
+<title>Noções Básicas de Sass – My Learning Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../src/pages/sass/b2-sass.html" rel="next">
-<link href="../../../src/pages/sass/a2-sass.html" rel="prev">
+<link href="../../../src/pages/sass/a2-sass.html" rel="next">
+<link href="../../../src/pages/sass/index.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
@@ -94,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../src/index.qmd"> <i class="bi bi-house-heart-fill" role="img">
+    <a class="nav-link" href="../../../index.html"> <i class="bi bi-house-heart-fill" role="img">
 </i> 
 <span class="menu-text">Home</span></a>
   </li>  
@@ -115,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Estrutura de uma Folha de Estilo</h1>
+          <h1 class="quarto-secondary-nav-title">Noções Básicas de Sass</h1>
         </a>     
     </div>
   </nav>
@@ -151,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../src/pages/sass/a1-sass.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/pages/sass/a1-sass.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Noções Básicas de Sass</span></a>
   </div>
 </li>
@@ -165,16 +199,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Regras de Estilo</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../src/pages/sass/b1-sass.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../src/pages/sass/b1-sass.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Estrutura de uma Folha de Estilo</span></a>
   </div>
 </li>
@@ -182,6 +216,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../../../src/pages/sass/b2-sass.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Comentários</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../src/pages/sass/b3-sass.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Funções Especiais</span></a>
   </div>
 </li>
       </ul>
@@ -198,19 +238,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#declarações" id="toc-declarações" class="nav-link active" data-scroll-target="#declarações">Declarações</a>
-  <ul class="collapse">
-  <li><a href="#declarações-universais" id="toc-declarações-universais" class="nav-link" data-scroll-target="#declarações-universais">Declarações Universais</a></li>
-  <li><a href="#instruções-css" id="toc-instruções-css" class="nav-link" data-scroll-target="#instruções-css">Instruções CSS</a></li>
-  <li><a href="#declarações-de-nível-superior" id="toc-declarações-de-nível-superior" class="nav-link" data-scroll-target="#declarações-de-nível-superior">Declarações de Nível Superior</a></li>
-  <li><a href="#outras-declarações" id="toc-outras-declarações" class="nav-link" data-scroll-target="#outras-declarações">Outras Declarações</a></li>
-  </ul></li>
-  <li><a href="#expressões" id="toc-expressões" class="nav-link" data-scroll-target="#expressões">Expressões</a>
-  <ul class="collapse">
-  <li><a href="#literais" id="toc-literais" class="nav-link" data-scroll-target="#literais">Literais</a></li>
-  <li><a href="#operações" id="toc-operações" class="nav-link" data-scroll-target="#operações">Operações</a></li>
-  <li><a href="#outras-expressões" id="toc-outras-expressões" class="nav-link" data-scroll-target="#outras-expressões">Outras Expressões</a></li>
-  </ul></li>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a></li>
+  <li><a href="#pré-processamento" id="toc-pré-processamento" class="nav-link" data-scroll-target="#pré-processamento">Pré-processamento</a></li>
+  <li><a href="#sintaxes" id="toc-sintaxes" class="nav-link" data-scroll-target="#sintaxes">Sintaxes</a></li>
+  <li><a href="#variáveis" id="toc-variáveis" class="nav-link" data-scroll-target="#variáveis">Variáveis</a></li>
+  <li><a href="#aninhamento" id="toc-aninhamento" class="nav-link" data-scroll-target="#aninhamento">Aninhamento</a></li>
+  <li><a href="#parciais" id="toc-parciais" class="nav-link" data-scroll-target="#parciais">Parciais</a></li>
+  <li><a href="#módulos" id="toc-módulos" class="nav-link" data-scroll-target="#módulos">Módulos</a></li>
+  <li><a href="#misturas-mixins" id="toc-misturas-mixins" class="nav-link" data-scroll-target="#misturas-mixins">Misturas (Mixins)</a></li>
+  <li><a href="#herança-extend" id="toc-herança-extend" class="nav-link" data-scroll-target="#herança-extend">Herança (Extend)</a></li>
+  <li><a href="#operadores" id="toc-operadores" class="nav-link" data-scroll-target="#operadores">Operadores</a></li>
   </ul>
 </nav>
     </div>
@@ -219,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Estrutura de uma Folha de Estilo</h1>
+<h1 class="title d-none d-lg-block">Noções Básicas de Sass</h1>
 </div>
 
 
@@ -242,89 +279,150 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Assim como o CSS, a maioria das folhas de estilo Sass é composta principalmente por regras de estilo que contêm declarações de propriedade. No entanto, o Sass oferece diversos recursos adicionais que coexistem com essas declarações.</p>
-<section id="declarações" class="level2">
-<h2 class="anchored" data-anchor-id="declarações">Declarações</h2>
-<p>Uma folha de estilo Sass é composta por uma série de declarações, que são avaliadas para construir o CSS resultante. Algumas declarações possuem blocos — definidos por <code>{</code> e <code>}</code> — que contêm outras declarações. Por exemplo, uma regra de estilo é uma declaração com um bloco que, por sua vez, pode conter declarações de propriedade.</p>
-<p>No SCSS, as instruções são separadas por ponto e vírgula (que é opcional quando a instrução possui bloco). Na sintaxe recuada, elas são separadas apenas por quebras de linha.</p>
-<section id="declarações-universais" class="level3">
-<h3 class="anchored" data-anchor-id="declarações-universais">Declarações Universais</h3>
-<p>As declarações a seguir podem ser utilizadas em qualquer parte de uma folha de estilo Sass:</p>
-<ul>
-<li>Declarações de variáveis, como <code>$var: value</code>.</li>
-<li>Regras de controle de fluxo, como <code>@if</code> e <code>@each</code>.</li>
-<li>Regras como <code>@error</code>, <code>@warn</code> e <code>@debug</code>.</li>
-</ul>
+<section id="introdução" class="level1">
+<h1>Introdução</h1>
+<p>Sass (Syntactically Awesome Stylesheets) é um pré-processador CSS que adiciona recursos avançados à linguagem, como variáveis, aninhamento, mixins e herança. Ele facilita a escrita e manutenção de folhas de estilo, promovendo um código mais organizado, reutilizável e eficiente.</p>
+<hr>
 </section>
-<section id="instruções-css" class="level3">
-<h3 class="anchored" data-anchor-id="instruções-css">Instruções CSS</h3>
-<p>Essas instruções são da formatação do CSS e podem ser utilizadas em qualquer lugar, exceto dentro de uma função definida com <code>@function</code>:</p>
-<ul>
-<li>Regras de estilo, como <code>h1 { /* ... */ }</code>.</li>
-<li>Regras CSS (@-rules), como <code>@media</code> e <code>@font-face</code>.</li>
-<li>Uso de mixins com <code>@include</code>.</li>
-<li>A regra <code>@at-root</code>.</li>
-</ul>
+<section id="pré-processamento" class="level1">
+<h1>Pré-processamento</h1>
+<p>Com o aumento da complexidade das folhas de estilo CSS, o uso de um pré-processador torna-se essencial. O Sass permite escrever código mais robusto que é, posteriormente, compilado em CSS padrão.</p>
+<p>Para compilar um arquivo Sass em CSS, utiliza-se o terminal:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sass</span> input.scss output.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Para monitorar alterações automaticamente:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sass</span> <span class="at">--watch</span> input.scss output.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Também é possível monitorar pastas inteiras:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sass</span> <span class="at">--watch</span> app/sass:public/stylesheets</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
 </section>
-<section id="declarações-de-nível-superior" class="level3">
-<h3 class="anchored" data-anchor-id="declarações-de-nível-superior">Declarações de Nível Superior</h3>
-<p>Essas declarações só podem ser utilizadas no nível superior de uma folha de estilo ou aninhadas dentro de uma instrução CSS de nível superior:</p>
+<section id="sintaxes" class="level1">
+<h1>Sintaxes</h1>
+<p>Sass possui duas sintaxes:</p>
 <ul>
-<li>Carregamento de módulos, utilizando <code>@use</code>.</li>
-<li>Importações, utilizando <code>@import</code>.</li>
-<li>Definições de mixin com <code>@mixin</code>.</li>
-<li>Definições de função com <code>@function</code>.</li>
-</ul>
-</section>
-<section id="outras-declarações" class="level3">
-<h3 class="anchored" data-anchor-id="outras-declarações">Outras Declarações</h3>
-<ul>
-<li>Declarações de propriedade, como <code>width: 100px</code>, devem ser utilizadas dentro de regras de estilo e de algumas regras CSS.</li>
-<li>A regra <code>@extend</code> pode ser utilizada apenas dentro de regras de estilo.</li>
+<li><strong>SCSS (<code>.scss</code>)</strong>: mais comum, é um superconjunto do CSS.</li>
+<li><strong>SASS (<code>.sass</code>)</strong>: usa indentação ao invés de chaves e ponto e vírgula.</li>
 </ul>
 <hr>
 </section>
+<section id="variáveis" class="level1">
+<h1>Variáveis</h1>
+<p>Permitem armazenar valores reutilizáveis, como cores e fontes.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">$font-stack</span>: Helvetica<span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="va">$primary-color</span>: <span class="cn">#333</span><span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>body {</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font</span>: <span class="dv">100</span><span class="dt">%</span> <span class="va">$font-stack</span><span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="va">$primary-color</span><span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
 </section>
-<section id="expressões" class="level2">
-<h2 class="anchored" data-anchor-id="expressões">Expressões</h2>
-<p>Uma expressão é qualquer valor posicionado à direita de uma declaração de propriedade ou de uma variável. Cada expressão gera um valor. Qualquer valor de propriedade CSS válido também é uma expressão Sass. No entanto, o Sass expande significativamente o poder das expressões, permitindo seu uso em mixins, funções, controle de fluxo com <code>@if</code> e operações aritméticas. Essa sintaxe de expressão é chamada <strong>SassScript</strong>.</p>
-<section id="literais" class="level3">
-<h3 class="anchored" data-anchor-id="literais">Literais</h3>
-<p>As expressões mais básicas representam valores estáticos:</p>
-<ul>
-<li><strong>Números</strong>, com ou sem unidades: <code>12</code>, <code>100px</code>.</li>
-<li><strong>Strings</strong>, com ou sem aspas: <code>"Helvetica Neue"</code>, <code>bold</code>.</li>
-<li><strong>Cores</strong>, por código hexadecimal ou nome: <code>#c6538c</code>, <code>blue</code>.</li>
-<li><strong>Booleanos</strong>: <code>true</code> ou <code>false</code>.</li>
-<li>O valor <strong>null</strong>.</li>
-<li><strong>Listas de valores</strong>, separados por espaço ou vírgula, com ou sem colchetes: <code>1.5em 1em 0 2em</code>, <code>Helvetica, Arial, sans-serif</code>, <code>[col1-start]</code>.</li>
-<li><strong>Mapas</strong>, que associam chaves a valores: <code>("background": red, "foreground": pink)</code>.]+7</li>
-</ul>
+<section id="aninhamento" class="level1">
+<h1>Aninhamento</h1>
+<p>Reflete a hierarquia do HTML, facilitando a leitura do código CSS.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>nav {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  ul {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">margin</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">padding</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">list-style</span>: <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  li {</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">display</span>: <span class="dv">inline-block</span><span class="op">;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  a {</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">display</span>: <span class="dv">block</span><span class="op">;</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">padding</span>: <span class="dv">6</span><span class="dt">px</span> <span class="dv">12</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">text-decoration</span>: <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
 </section>
-<section id="operações" class="level3">
-<h3 class="anchored" data-anchor-id="operações">Operações</h3>
-<p>O Sass permite diversas operações:</p>
-<ul>
-<li><code>==</code> e <code>!=</code> verificam igualdade ou diferença entre valores.</li>
-<li><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> e <code>%</code> realizam operações matemáticas com suporte a unidades.</li>
-<li><code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code> comparam números.</li>
-<li><code>and</code>, <code>or</code>, e <code>not</code> funcionam como operadores booleanos. Apenas <code>false</code> e <code>null</code> são considerados falsos.</li>
-<li><code>+</code>, <code>-</code>, e <code>/</code> podem concatenar strings.</li>
-<li>Parênteses <code>( )</code> podem ser utilizados para definir precedência de operações.</li>
-</ul>
+<section id="parciais" class="level1">
+<h1>Parciais</h1>
+<p>Arquivos Sass iniciados com <code>_</code> que contêm trechos de código reutilizáveis. São importados com <code>@use</code> e não geram CSS diretamente.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">// _partial.scss</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
 </section>
-<section id="outras-expressões" class="level3">
-<h3 class="anchored" data-anchor-id="outras-expressões">Outras Expressões</h3>
-<ul>
-<li><strong>Variáveis</strong>, como <code>$var</code>.</li>
-<li><strong>Chamadas de função</strong>, como <code>nth($list, 1)</code> ou <code>var(--main-bg-color)</code>.</li>
-<li><strong>Funções especiais</strong>, como <code>calc(1px + 100%)</code> ou <code>url(http://myapp.com/assets/logo.png)</code>.</li>
-<li>O <strong>seletor pai</strong>, representado por <code>&amp;</code>.</li>
-<li>O valor <code>!important</code>, interpretado como uma string sem aspas.</li>
-</ul>
+<section id="módulos" class="level1">
+<h1>Módulos</h1>
+<p>A diretiva <code>@use</code> permite dividir o código em múltiplos arquivos Sass.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">// _base.scss</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="va">$font-stack</span>: Helvetica<span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="va">$primary-color</span>: <span class="cn">#333</span><span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>body {</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font</span>: <span class="dv">100</span><span class="dt">%</span> <span class="va">$font-stack</span><span class="op">;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="va">$primary-color</span><span class="op">;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">// styles.scss</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="im">@use</span> <span class="st">'base'</span><span class="op">;</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">.inverse</span> {</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: base.<span class="va">$primary-color</span><span class="op">;</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">white</span><span class="op">;</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="misturas-mixins" class="level1">
+<h1>Misturas (Mixins)</h1>
+<p>Permitem agrupar regras CSS reutilizáveis. Podem receber parâmetros.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">@mixin</span> <span class="fu">theme</span>(<span class="va">$theme</span><span class="er">:</span> <span class="er">DarkGray</span>) {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span>: <span class="va">$theme</span><span class="op">;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">box-shadow</span>: <span class="dv">0</span> <span class="dv">0</span> <span class="dv">1</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="va">$theme</span><span class="op">,</span> <span class="dv">.25</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">#fff</span><span class="op">;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.info</span> {</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="im">@include</span> theme<span class="op">;</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">.alert</span> {</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="im">@include</span> <span class="fu">theme(</span><span class="va">$theme</span>: <span class="cn">DarkRed</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="fu">.success</span> {</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="im">@include</span> <span class="fu">theme(</span><span class="va">$theme</span>: <span class="cn">DarkGreen</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="herança-extend" class="level1">
+<h1>Herança (Extend)</h1>
+<p>Compartilha estilos entre seletores por meio da diretiva <code>@extend</code>. Pode ser aplicada a classes placeholder (<code>%nome</code>) que só são incluídas quando estendidas.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">%message-shared</span> {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#ccc</span><span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span>: <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">#333</span><span class="op">;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.message</span> {</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="im">@extend</span> <span class="bu">%message-shared</span><span class="op">;</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="fu">.success</span> {</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="im">@extend</span> <span class="bu">%message-shared</span><span class="op">;</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-color</span>: <span class="cn">green</span><span class="op">;</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="operadores" class="level1">
+<h1>Operadores</h1>
+<p>Permitem realizar operações matemáticas com valores CSS.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">@use</span> <span class="st">"sass:math"</span><span class="op">;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">.container</span> {</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">flex</span><span class="op">;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>article<span class="ex">[role</span><span class="op">=</span><span class="st">"main"</span><span class="ex">]</span> {</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">math</span>.<span class="fu">div(</span><span class="dv">600</span><span class="dt">px</span><span class="op">,</span> <span class="dv">960</span><span class="dt">px</span><span class="fu">)</span> <span class="op">*</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>aside<span class="ex">[role</span><span class="op">=</span><span class="st">"complementary"</span><span class="ex">]</span> {</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">math</span>.<span class="fu">div(</span><span class="dv">300</span><span class="dt">px</span><span class="op">,</span> <span class="dv">960</span><span class="dt">px</span><span class="fu">)</span> <span class="op">*</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-left</span>: <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -729,13 +827,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../src/pages/sass/a2-sass.html" class="pagination-link" aria-label="Sintaxe">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Sintaxe</span>
+      <a href="../../../src/pages/sass/index.html" class="pagination-link" aria-label="Resumos">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Resumos</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../src/pages/sass/b2-sass.html" class="pagination-link" aria-label="Comentários">
-        <span class="nav-page-text">Comentários</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../src/pages/sass/a2-sass.html" class="pagination-link" aria-label="Sintaxe">
+        <span class="nav-page-text">Sintaxe</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

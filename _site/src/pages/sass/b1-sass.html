@@ -8,7 +8,7 @@
 
 <meta name="author" content="Dalila Mendonça">
 
-<title>b2-sass – My Learning Things</title>
+<title>Estrutura de uma Folha de Estilo – My Learning Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,7 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../src/pages/sass/b1-sass.html" rel="prev">
+<link href="../../../src/pages/sass/b2-sass.html" rel="next">
+<link href="../../../src/pages/sass/a2-sass.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
@@ -127,7 +94,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../src/index.qmd"> <i class="bi bi-house-heart-fill" role="img">
+    <a class="nav-link" href="../../../index.html"> <i class="bi bi-house-heart-fill" role="img">
 </i> 
 <span class="menu-text">Home</span></a>
   </li>  
@@ -148,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"></h1>
+          <h1 class="quarto-secondary-nav-title">Estrutura de uma Folha de Estilo</h1>
         </a>     
     </div>
   </nav>
@@ -175,13 +142,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Introdução</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/pages/sass/a1-sass.html" class="sidebar-item-text sidebar-link">
@@ -207,14 +174,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../src/pages/sass/b1-sass.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/pages/sass/b1-sass.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Estrutura de uma Folha de Estilo</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../src/pages/sass/b2-sass.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../src/pages/sass/b2-sass.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Comentários</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../src/pages/sass/b3-sass.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Funções Especiais</span></a>
   </div>
 </li>
       </ul>
@@ -231,11 +204,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#comentários" id="toc-comentários" class="nav-link active" data-scroll-target="#comentários">Comentários</a>
+  <li><a href="#declarações" id="toc-declarações" class="nav-link active" data-scroll-target="#declarações">Declarações</a>
   <ul class="collapse">
-  <li><a href="#comentários-scss" id="toc-comentários-scss" class="nav-link" data-scroll-target="#comentários-scss">Comentários SCSS</a></li>
-  <li><a href="#comentários-na-sintaxe-recuada-sass" id="toc-comentários-na-sintaxe-recuada-sass" class="nav-link" data-scroll-target="#comentários-na-sintaxe-recuada-sass">Comentários na Sintaxe Recuada (Sass)</a></li>
-  <li><a href="#comentários-de-documentação" id="toc-comentários-de-documentação" class="nav-link" data-scroll-target="#comentários-de-documentação">Comentários de Documentação</a></li>
+  <li><a href="#declarações-universais" id="toc-declarações-universais" class="nav-link" data-scroll-target="#declarações-universais">Declarações Universais</a></li>
+  <li><a href="#instruções-css" id="toc-instruções-css" class="nav-link" data-scroll-target="#instruções-css">Instruções CSS</a></li>
+  <li><a href="#declarações-de-nível-superior" id="toc-declarações-de-nível-superior" class="nav-link" data-scroll-target="#declarações-de-nível-superior">Declarações de Nível Superior</a></li>
+  <li><a href="#outras-declarações" id="toc-outras-declarações" class="nav-link" data-scroll-target="#outras-declarações">Outras Declarações</a></li>
+  </ul></li>
+  <li><a href="#expressões" id="toc-expressões" class="nav-link" data-scroll-target="#expressões">Expressões</a>
+  <ul class="collapse">
+  <li><a href="#literais" id="toc-literais" class="nav-link" data-scroll-target="#literais">Literais</a></li>
+  <li><a href="#operações" id="toc-operações" class="nav-link" data-scroll-target="#operações">Operações</a></li>
+  <li><a href="#outras-expressões" id="toc-outras-expressões" class="nav-link" data-scroll-target="#outras-expressões">Outras Expressões</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -245,6 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
+<h1 class="title d-none d-lg-block">Estrutura de uma Folha de Estilo</h1>
 </div>
 
 
@@ -267,104 +248,86 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="comentários" class="level1">
-<h1>Comentários</h1>
+<p>Assim como o CSS, a maioria das folhas de estilo Sass é composta principalmente por regras de estilo que contêm declarações de propriedade. No entanto, o Sass oferece diversos recursos adicionais que coexistem com essas declarações.</p>
+<section id="declarações" class="level2">
+<h2 class="anchored" data-anchor-id="declarações">Declarações</h2>
+<p>Uma folha de estilo Sass é composta por uma série de declarações, que são avaliadas para construir o CSS resultante. Algumas declarações possuem blocos — definidos por <code>{</code> e <code>}</code> — que contêm outras declarações. Por exemplo, uma regra de estilo é uma declaração com um bloco que, por sua vez, pode conter declarações de propriedade.</p>
+<p>No SCSS, as instruções são separadas por ponto e vírgula (que é opcional quando a instrução possui bloco). Na sintaxe recuada, elas são separadas apenas por quebras de linha.</p>
+<section id="declarações-universais" class="level3">
+<h3 class="anchored" data-anchor-id="declarações-universais">Declarações Universais</h3>
+<p>As declarações a seguir podem ser utilizadas em qualquer parte de uma folha de estilo Sass:</p>
+<ul>
+<li>Declarações de variáveis, como <code>$var: value</code>.</li>
+<li>Regras de controle de fluxo, como <code>@if</code> e <code>@each</code>.</li>
+<li>Regras como <code>@error</code>, <code>@warn</code> e <code>@debug</code>.</li>
+</ul>
+</section>
+<section id="instruções-css" class="level3">
+<h3 class="anchored" data-anchor-id="instruções-css">Instruções CSS</h3>
+<p>Essas instruções são da formatação do CSS e podem ser utilizadas em qualquer lugar, exceto dentro de uma função definida com <code>@function</code>:</p>
+<ul>
+<li>Regras de estilo, como <code>h1 { /* ... */ }</code>.</li>
+<li>Regras CSS (@-rules), como <code>@media</code> e <code>@font-face</code>.</li>
+<li>Uso de mixins com <code>@include</code>.</li>
+<li>A regra <code>@at-root</code>.</li>
+</ul>
+</section>
+<section id="declarações-de-nível-superior" class="level3">
+<h3 class="anchored" data-anchor-id="declarações-de-nível-superior">Declarações de Nível Superior</h3>
+<p>Essas declarações só podem ser utilizadas no nível superior de uma folha de estilo ou aninhadas dentro de uma instrução CSS de nível superior:</p>
+<ul>
+<li>Carregamento de módulos, utilizando <code>@use</code>.</li>
+<li>Importações, utilizando <code>@import</code>.</li>
+<li>Definições de mixin com <code>@mixin</code>.</li>
+<li>Definições de função com <code>@function</code>.</li>
+</ul>
+</section>
+<section id="outras-declarações" class="level3">
+<h3 class="anchored" data-anchor-id="outras-declarações">Outras Declarações</h3>
+<ul>
+<li>Declarações de propriedade, como <code>width: 100px</code>, devem ser utilizadas dentro de regras de estilo e de algumas regras CSS.</li>
+<li>A regra <code>@extend</code> pode ser utilizada apenas dentro de regras de estilo.</li>
+</ul>
 <hr>
-<p>A maneira como os comentários funcionam no Sass difere de forma significativa entre a sintaxe SCSS e a sintaxe recuada.</p>
-<p>Ambas suportam dois tipos de comentários:</p>
-<ul>
-<li>Comentários com <code>/* */</code> (multilinha): geralmente são compilados para CSS.</li>
-<li>Comentários com <code>//</code> (linha única): nunca são compilados para CSS.</li>
-</ul>
-<section id="comentários-scss" class="level2">
-<h2 class="anchored" data-anchor-id="comentários-scss">Comentários SCSS</h2>
-<p>Em SCSS, os comentários funcionam de forma similar a linguagens como JavaScript.</p>
-<ul>
-<li>Comentários de linha única começam com <code>//</code> e são ignorados no CSS compilado. Por esse motivo são chamados de <strong>comentários silenciosos</strong>.</li>
-<li>Comentários multilinha começam com <code>/*</code> e terminam com <code>*/</code>. Quando utilizados fora de seletores ou blocos, são compilados para CSS, por isso são chamados de <strong>loud comments</strong>.</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode scss code-sample code-with-copy"><code class="sourceCode scss"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Este comentário não será incluído no CSS.</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">/* Mas este será, exceto no modo compactado. */</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">/* Também pode conter interpolação:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"> * 1 + 1 = #{1 + 1} */</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">/*! Este será incluído até mesmo no modo compactado. */</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>p <span class="co">/* Comentários multilinha podem ser inseridos em qualquer local</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">     onde espaços em branco sejam permitidos. */</span> <span class="fu">.sans</span> {</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font</span>: Helvetica<span class="op">,</span> <span class="co">// Comentários de linha única também são permitidos aqui.</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="dv">sans-serif</span><span class="op">;</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="comentários-na-sintaxe-recuada-sass" class="level2">
-<h2 class="anchored" data-anchor-id="comentários-na-sintaxe-recuada-sass">Comentários na Sintaxe Recuada (Sass)</h2>
-<p>Na sintaxe recuada, os comentários seguem o padrão baseado em <strong>recuo</strong>, como todo o restante da linguagem.</p>
-<ul>
-<li>Comentários com <code>//</code> continuam sendo <strong>silenciosos</strong>, mas <strong>tudo o que estiver recuado abaixo da linha com <code>//</code> também será comentado</strong>.</li>
-</ul>
-<p>Comentários iniciados com <code>/*</code> funcionam de forma similar aos do SCSS, mas <strong>não requerem <code>*/</code> para serem fechados</strong>, pois a extensão é determinada pela indentação.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sass code-sample code-with-copy"><code class="sourceCode sass"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Este comentário não será incluído no CSS.</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">  Esta linha também está comentada.</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">/* Este comentário será incluído no CSS, exceto no modo compactado.</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">/* Também pode conter interpolação:</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">  1 + 1 = #{1 + 1}</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">/*! Comentário sempre incluído no CSS, até no modo compactado.</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>p <span class="fu">.sans</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font</span>: Helvetica<span class="op">,</span> <span class="co">/* Comentários inline devem ser fechados. */</span> <span class="dv">sans-serif</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Comentários também podem ser utilizados dentro de expressões na sintaxe recuada, usando a mesma sintaxe do SCSS.
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
 </section>
-<section id="comentários-de-documentação" class="level2">
-<h2 class="anchored" data-anchor-id="comentários-de-documentação">Comentários de Documentação</h2>
-<p>Ao desenvolver bibliotecas em Sass, é possível utilizar <strong>comentários de documentação</strong> para descrever mixins, funções, variáveis e seletores. Eles são lidos por ferramentas como o <strong>SassDoc</strong>, que geram documentação automática a partir desses comentários.</p>
+<section id="expressões" class="level2">
+<h2 class="anchored" data-anchor-id="expressões">Expressões</h2>
+<p>Uma expressão é qualquer valor posicionado à direita de uma declaração de propriedade ou de uma variável. Cada expressão gera um valor. Qualquer valor de propriedade CSS válido também é uma expressão Sass. No entanto, o Sass expande significativamente o poder das expressões, permitindo seu uso em mixins, funções, controle de fluxo com <code>@if</code> e operações aritméticas. Essa sintaxe de expressão é chamada <strong>SassScript</strong>.</p>
+<section id="literais" class="level3">
+<h3 class="anchored" data-anchor-id="literais">Literais</h3>
+<p>As expressões mais básicas representam valores estáticos:</p>
 <ul>
-<li>São escritos com três barras (<code>///</code>) e colocados diretamente acima do item documentado.</li>
-<li>O conteúdo pode usar <strong>Markdown</strong> e <strong>anotações</strong> como <code>@param</code> e <code>@return</code>.</li>
+<li><strong>Números</strong>, com ou sem unidades: <code>12</code>, <code>100px</code>.</li>
+<li><strong>Strings</strong>, com ou sem aspas: <code>"Helvetica Neue"</code>, <code>bold</code>.</li>
+<li><strong>Cores</strong>, por código hexadecimal ou nome: <code>#c6538c</code>, <code>blue</code>.</li>
+<li><strong>Booleanos</strong>: <code>true</code> ou <code>false</code>.</li>
+<li>O valor <strong>null</strong>.</li>
+<li><strong>Listas de valores</strong>, separados por espaço ou vírgula, com ou sem colchetes: <code>1.5em 1em 0 2em</code>, <code>Helvetica, Arial, sans-serif</code>, <code>[col1-start]</code>.</li>
+<li><strong>Mapas</strong>, que associam chaves a valores: <code>("background": red, "foreground": pink)</code>.]+7</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode scss code-sample code-with-copy"><code class="sourceCode scss"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">/// Calcula uma exponenciação.</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">///</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">/// @param {number} $base</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">///   O número a ser multiplicado por ele mesmo.</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">/// @param {integer (sem unidade)} $exponent</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">///   Quantas vezes multiplicar `$base`.</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">/// @return {number} `$base` elevado à `$exponent`.</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="im">@function</span> <span class="fu">pow</span>(<span class="va">$base</span><span class="op">,</span> <span class="va">$exponent</span>) {</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="va">$result</span>: <span class="dv">1</span><span class="op">;</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="im">@for</span> <span class="va">$_</span> from <span class="dv">1</span> through <span class="va">$exponent</span> {</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="va">$result</span>: <span class="va">$result</span> <span class="op">*</span> <span class="va">$base</span><span class="op">;</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="im">@return</span> <span class="va">$result</span><span class="op">;</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Consulte a documentação da biblioteca <a href="https://www.oddbird.net/susy/" class="url-page">Susy Grid</a> para ver um exemplo prático do uso de <code>SassDoc</code>.
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
+</section>
+<section id="operações" class="level3">
+<h3 class="anchored" data-anchor-id="operações">Operações</h3>
+<p>O Sass permite diversas operações:</p>
+<ul>
+<li><code>==</code> e <code>!=</code> verificam igualdade ou diferença entre valores.</li>
+<li><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> e <code>%</code> realizam operações matemáticas com suporte a unidades.</li>
+<li><code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code> comparam números.</li>
+<li><code>and</code>, <code>or</code>, e <code>not</code> funcionam como operadores booleanos. Apenas <code>false</code> e <code>null</code> são considerados falsos.</li>
+<li><code>+</code>, <code>-</code>, e <code>/</code> podem concatenar strings.</li>
+<li>Parênteses <code>( )</code> podem ser utilizados para definir precedência de operações.</li>
+</ul>
+</section>
+<section id="outras-expressões" class="level3">
+<h3 class="anchored" data-anchor-id="outras-expressões">Outras Expressões</h3>
+<ul>
+<li><strong>Variáveis</strong>, como <code>$var</code>.</li>
+<li><strong>Chamadas de função</strong>, como <code>nth($list, 1)</code> ou <code>var(--main-bg-color)</code>.</li>
+<li><strong>Funções especiais</strong>, como <code>calc(1px + 100%)</code> ou <code>url(http://myapp.com/assets/logo.png)</code>.</li>
+<li>O <strong>seletor pai</strong>, representado por <code>&amp;</code>.</li>
+<li>O valor <code>!important</code>, interpretado como uma string sem aspas.</li>
+</ul>
 
 
 </section>
@@ -772,11 +735,14 @@ Consulte a documentação da biblioteca <a href="https://www.oddbird.net/susy/" 
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../src/pages/sass/b1-sass.html" class="pagination-link" aria-label="Estrutura de uma Folha de Estilo">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Estrutura de uma Folha de Estilo</span>
+      <a href="../../../src/pages/sass/a2-sass.html" class="pagination-link" aria-label="Sintaxe">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Sintaxe</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../../../src/pages/sass/b2-sass.html" class="pagination-link" aria-label="Comentários">
+        <span class="nav-page-text">Comentários</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #140114;
+}
+
+
+
+#home-page-layout {
+  width: 80vw;
+  height: 70vh;
+  display: grid;
+  margin: 10vh auto auto auto;
+  grid-template-columns: auto  auto 40%;
+  background-color: rgb(237, 219, 255);
+  border-radius: 20px;
+}
+
+#home-page-layout > div {
+  padding: 10px;
+}
+
+#col-hero-image {
+  grid-column: 3 ;
+  grid-row: 1 / span 3 ;
+  background-image: url("img/code.png");
+  background-size: cover ;
+  background-repeat: no-repeat;
+  padding-bottom: 2rem;
+}
+
+#home-title {
+  grid-column: 1  /span 2;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 3em;
+  font-weight: 800;
+  text-align: center;
+}
+
+#home-message {
+  grid-column: 1  /span 2;
+  grid-row: 2;
+  text-align: center;
+  font-size: 1.1em;
+  color: rgb(216, 66, 216);
+}
+
+#home-description {
+  grid-column: 1 /span 2;
+  text-align: justify;
+  padding: 5px;
+}

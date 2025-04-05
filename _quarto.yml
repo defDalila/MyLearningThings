@@ -1,13 +1,12 @@
 project:
   type: website
-  output-dir: site
-  
+  output-dir: _site
+
   
 website:
   title: "My Learning Things"
   bread-crumbs: false
   page-navigation: true
-
   navbar:
     logo: src/assets/img/logo.png
     logo-href: src/index.qmd
@@ -16,16 +15,16 @@ website:
     title: false
     left:
       - icon: house-heart-fill
-        href: src/index.qmd
-        text: Home
+        text: "Home"
+        href: index.qmd
       - icon: clipboard-heart-fill
-        href: src/my-notes.qmd
         text: "My Notes"
+        href: src/my-notes.qmd
         
   sidebar: 
     - id: notes-sass
       style: docked
-      collapse-level: 3
+      collapse-level: 2
       align: left
       background: light
       pinned: true
@@ -43,6 +42,7 @@ website:
               contents: 
                 - src/pages/sass/b1-sass.qmd
                 - src/pages/sass/b2-sass.qmd
+                - src/pages/sass/b3-sass.qmd
             
 
 

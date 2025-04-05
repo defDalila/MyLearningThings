@@ -8,7 +8,7 @@
 
 <meta name="author" content="Dalila Mendonça">
 
-<title>b3-sass – My Learning Things</title>
+<title>Sintaxe – My Learning Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,6 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
+<link href="../../../src/pages/sass/b1-sass.html" rel="next">
+<link href="../../../src/pages/sass/a1-sass.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
@@ -126,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../src/index.qmd"> <i class="bi bi-house-heart-fill" role="img">
+    <a class="nav-link" href="../../../index.html"> <i class="bi bi-house-heart-fill" role="img">
 </i> 
 <span class="menu-text">Home</span></a>
   </li>  
@@ -147,7 +149,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"></h1>
+          <h1 class="quarto-secondary-nav-title">Sintaxe</h1>
         </a>     
     </div>
   </nav>
@@ -189,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../src/pages/sass/a2-sass.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../src/pages/sass/a2-sass.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Sintaxe</span></a>
   </div>
 </li>
@@ -197,13 +199,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Regras de Estilo</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../src/pages/sass/b1-sass.html" class="sidebar-item-text sidebar-link">
@@ -214,6 +216,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../../../src/pages/sass/b2-sass.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Comentários</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../src/pages/sass/b3-sass.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Funções Especiais</span></a>
   </div>
 </li>
       </ul>
@@ -230,12 +238,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#funções-especiais" id="toc-funções-especiais" class="nav-link active" data-scroll-target="#funções-especiais">Funções Especiais</a>
+  <li><a href="#scss" id="toc-scss" class="nav-link active" data-scroll-target="#scss">SCSS</a>
   <ul class="collapse">
-  <li><a href="#url" id="toc-url" class="nav-link" data-scroll-target="#url"><code>URL()</code></a>
-  <ul class="collapse">
-  <li><a href="#element-progid...-e-expression" id="toc-element-progid...-e-expression" class="nav-link" data-scroll-target="#element-progid...-e-expression"><code>Element()</code>, <code>Progid:...()</code> e <code>Expression()</code></a></li>
-  </ul></li>
+  <li><a href="#sintaxe-recuada-sass" id="toc-sintaxe-recuada-sass" class="nav-link" data-scroll-target="#sintaxe-recuada-sass">Sintaxe Recuada (Sass)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -245,6 +250,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
+<h1 class="title d-none d-lg-block">Sintaxe</h1>
 </div>
 
 
@@ -267,99 +273,76 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="funções-especiais" class="level1">
-<h1>Funções Especiais</h1>
-<p>Embora o Sass suporte a maioria das funções CSS utilizando a sintaxe tradicional de funções, algumas delas requerem tratamento especial devido à sua estrutura de sintaxe diferenciada. Nessas exceções, o Sass emprega lógica adicional para interpretar corretamente os argumentos. Todas essas chamadas especiais de função retornam <strong>strings sem aspas</strong>.</p>
-<section id="url" class="level2">
-<h2 class="anchored" data-anchor-id="url"><code>URL()</code></h2>
-<p>A função <code>url()</code> é amplamente utilizada em CSS porém e permitido inserir argumentos tanto entre aspas quanto sem aspas. Como as URLs que não estão entre aspas não são expressões válidas no <code>SassScript</code>, o Sass aplica um mecanismo de <code>parsing</code> interno, de modo que quando o argumento passado é um URL válido sem as aspas, o Sass o identifica diretamente, permitindo ainda interpolação de valores do <code>SassScript</code>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode scss code-sample code-with-copy"><code class="sourceCode scss"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">$roboto-font-path</span>: <span class="st">"../fonts/roboto"</span><span class="op">;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">@font-face</span> {</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Isso é analisado como uma chamada de função normal que usa uma string entre aspas.</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    src: <span class="fu">url(</span><span class="st">"</span><span class="op">#{</span><span class="va">$roboto-font-path</span><span class="op">}</span><span class="st">/Roboto-Thin.woff2"</span><span class="fu">)</span> <span class="fu">format(</span><span class="st">"woff2"</span><span class="fu">)</span><span class="op">;</span></span>
+<p>O Sass oferece duas sintaxes distintas. Ambas são compatíveis entre si, o que permite que você e sua equipe escolham a que melhor se adapta ao fluxo de trabalho adotado.</p>
+<section id="scss" class="level2">
+<h2 class="anchored" data-anchor-id="scss">SCSS</h2>
+<p>A sintaxe SCSS utiliza a extensão de arquivo <code>.scss</code>. Com poucas exceções, ela é um superconjunto do CSS, o que significa que todo código CSS válido também é considerado válido em SCSS. Por ser mais próxima da sintaxe tradicional do CSS, esta é a forma mais comum e acessível de se utilizar o Sass.</p>
+<p>Abaixo, um exemplo de SCSS:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">@mixin</span> <span class="fu">button-base</span>() {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="im">@include</span> <span class="fu">typography(</span>button<span class="fu">)</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="im">@include</span> ripple-surface<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="im">@include</span> ripple-radius-bounded<span class="op">;</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    font-family: <span class="st">"Roboto"</span><span class="op">;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    font-weight: <span class="dv">100</span><span class="op">;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">@font-face</span> {</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Isso é analisado como uma chamada de função normal que recebe uma expressão aritmética.</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    src: <span class="fu">url(</span><span class="st">$roboto-font-path + "/Roboto-Light.woff2"</span><span class="fu">)</span> <span class="fu">format(</span><span class="st">"woff2"</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    font-family: <span class="st">"Roboto"</span><span class="op">;</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    font-weight: <span class="dv">300</span><span class="op">;</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="im">@font-face</span> {</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Isso é analisado como uma função especial interpolada.</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    src: <span class="fu">url(</span><span class="st">#{$roboto-font-path}/Roboto-Regular.woff2</span><span class="fu">)</span> <span class="fu">format(</span><span class="st">"woff2"</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    font-family: <span class="st">"Roboto"</span><span class="op">;</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    font-weight: <span class="dv">400</span><span class="op">;</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>O mesmo código utilizando CSS:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode css code-sample code-with-copy"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">@font-face</span> {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">src</span><span class="ch">:</span> <span class="fu">url(</span><span class="st">"../fonts/roboto/Roboto-Thin.woff2"</span><span class="fu">)</span> <span class="fu">format(</span><span class="st">"woff2"</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span><span class="ch">:</span> <span class="st">"Roboto"</span><span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">100</span><span class="op">;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">@font-face</span> {</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">src</span><span class="ch">:</span> <span class="fu">url(</span><span class="st">"../fonts/roboto/Roboto-Light.woff2"</span><span class="fu">)</span> <span class="fu">format(</span><span class="st">"woff2"</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span><span class="ch">:</span> <span class="st">"Roboto"</span><span class="op">;</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">300</span><span class="op">;</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="im">@font-face</span> {</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">src</span><span class="ch">:</span> <span class="fu">url(</span><span class="st">../fonts/roboto/Roboto-Regular.woff2</span><span class="fu">)</span> <span class="fu">format(</span><span class="st">"woff2"</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span><span class="ch">:</span> <span class="st">"Roboto"</span><span class="op">;</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">400</span><span class="op">;</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="element-progid...-e-expression" class="level3">
-<h3 class="anchored" data-anchor-id="element-progid...-e-expression"><code>Element()</code>, <code>Progid:...()</code> e <code>Expression()</code></h3>
-<p>Essas funções seguem uma sintaxe não convencional, onde:</p>
-<ul>
-<li>A função <code>element()</code> está no escopo do CSS e seus IDs são passados como cores, portanto é necessário uma atenção especial ao ser analisada.</li>
-<li>As funções expression( ) e progrid: …( )<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> são funções legadas provenientes do navegador Internet Explorer e então não são suportadas na maioria dos navegadores modernos. Entretando, o Sass reconhece essas funções por questões de compatibilidade.</li>
-</ul>
-<div class="callout callout-style-default callout-important callout-titled">
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">inline-flex</span><span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">position</span>: <span class="dv">relative</span><span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="va">$button-height</span><span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span>: <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">&amp;</span><span class="in">:hover</span> {</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">cursor</span>: <span class="dv">pointer</span><span class="op">;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="op">&amp;</span><span class="in">:disabled</span> {</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">color</span>: <span class="va">$mdc-button-disabled-ink-color</span><span class="op">;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">cursor</span>: <span class="dv">default</span><span class="op">;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">pointer-events</span>: <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="sintaxe-recuada-sass" class="level3">
+<h3 class="anchored" data-anchor-id="sintaxe-recuada-sass">Sintaxe Recuada (Sass)</h3>
+<p>A sintaxe recuada, que originalmente nomeava a linguagem Sass, utiliza a extensão <code>.sass</code>. Diferente do SCSS, ela não emprega chaves ou ponto e vírgula, adotando o recuo (indentação) como estrutura sintática.</p>
+<p>Apesar de suportar os mesmos recursos do SCSS, a sintaxe recuada apresenta restrições, como a impossibilidade de expressões quebradas em múltiplas linhas.</p>
+<p>Exemplo em sintaxe recuada:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">@mixin</span> <span class="fu">button-base</span>()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="er">@include</span> <span class="er">typography</span>(<span class="er">button</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="er">@include</span> <span class="er">ripple-surface</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="er">@include</span> <span class="er">ripple-radius-bounded</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="er">display:</span> <span class="er">inline-flex</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="er">position:</span> <span class="er">relative</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="er">height:</span> <span class="va">$button-height</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="er">border:</span> <span class="er">none</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="er">vertical-align:</span> <span class="er">middle</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="er">&amp;:hover</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="er">cursor:</span> <span class="er">pointer</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="er">&amp;:disabled</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="er">color:</span> <span class="va">$mdc-button-disabled-ink-color</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="er">cursor:</span> <span class="er">default</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="er">pointer-events:</span> <span class="er">none</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-O Sass permite qualquer texto nessas chamadas de função, incluindo parênteses aninhados. Nada é interpretado como uma expressão SassScript, com a exceção de que a interpolação pode ser usada para injetar valores dinâmicos.
+Atenção: a sintaxe recuada não suporta expressões quebradas em várias linhas, conforme identificado no problema <a href="https://github.com/sass/sass/issues/216">#216</a>.
 </div>
 </div>
 <div class="callout-body-container callout-body">
 
 </div>
 </div>
-<section id="exemplos" class="level4">
-<h4 class="anchored" data-anchor-id="exemplos">Exemplos</h4>
-<div class="sourceCode" id="cb3"><pre class="sourceCode scss code-sample code-with-copy"><code class="sourceCode scss"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">$logo-element</span>: logo-bg<span class="op">;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">.logo</span> {</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span>: <span class="fu">element(</span>#<span class="op">#{</span><span class="va">$logo-element</span><span class="op">}</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode css code-sample code-with-copy"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.logo</span> {</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> element<span class="fu">(</span>#<span class="dv">logo-bg</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
 </section>
-</section>
-</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>funções passadas para a função pogrid: ()<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -759,6 +742,18 @@ O Sass permite qualquer texto nessas chamadas de função, incluindo parênteses
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../src/pages/sass/a1-sass.html" class="pagination-link" aria-label="Noções Básicas de Sass">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Noções Básicas de Sass</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../src/pages/sass/b1-sass.html" class="pagination-link" aria-label="Estrutura de uma Folha de Estilo">
+        <span class="nav-page-text">Estrutura de uma Folha de Estilo</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 
